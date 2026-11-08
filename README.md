@@ -8,8 +8,9 @@ This portfolio includes **Metabolic Pal**, a completed private mobile-app build,
 
 ## Project index
 
-| Project | Technology | What it demonstrates | 
-| --- | --- | --- | --- |
+
+| Project | Technology | What it demonstrates |
+| --- | --- | --- |
 | **01 / Metabolic Pal** | React Native, TypeScript, Expo, SQLite | Mobile app architecture, data persistence, domain logic, testing |
 | **02 / OptionLab** | JavaScript, Canvas, CSS | Mathematical modeling, financial calculations, interactive data visualization |
 | **03 / CorrectionLab** | Python, HTML/SVG | Event-driven algorithms, execution timing, risk logic, backtesting |
