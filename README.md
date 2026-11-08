@@ -2,7 +2,7 @@
 
 **Mobile apps · JavaScript / TypeScript · React Native · Python · Algorithms**
 
-I'm a computer science student at Arizona State University with experience building mobile applications, writing numerical algorithms, and developing interactive software. I enjoy the full process of development: translating requirements into interfaces and application logic, connecting data to features, and testing the behavior that matters.
+I'm a computer science professional with experience building mobile applications, writing numerical algorithms, and developing interactive software. I enjoy the full process of development: translating requirements into interfaces and application logic, connecting data to features, and testing the behavior that matters.
 
 This portfolio includes **Metabolic Pal**, a completed private mobile-app build, plus **three runnable technical demos** I created to showcase options modeling, systematic strategy backtesting, and browser-game engineering. The demos are portfolio examples—not claims about previously shipped commercial products.
 
@@ -11,11 +11,9 @@ This portfolio includes **Metabolic Pal**, a completed private mobile-app build,
 | Project | Technology | What it demonstrates | Explore |
 | --- | --- | --- | --- |
 | **01 / Metabolic Pal** | React Native, TypeScript, Expo, SQLite | Mobile app architecture, data persistence, domain logic, testing | [Code examples below](#01--metabolic-pal) |
-| **02 / OptionLab** | JavaScript, Canvas, CSS | Mathematical modeling, financial calculations, interactive data visualization | [App + source](projects/options-calculator/) |
-| **03 / CorrectionLab** | Python, HTML/SVG | Event-driven algorithms, execution timing, risk logic, backtesting | [Strategy + source](projects/correction-trading/) · [Example report](projects/correction-trading/output/report.html) |
-| **04 / Night Shift** | JavaScript, Canvas, CSS | Game loops, collision detection, state management, responsive input | [Game + source](projects/racing-game/) |
-
-> **Running the demos:** Download or clone this repository, then use the one-command instructions in the individual project folders. The browser apps run locally without third-party packages, and the backtest requires only Python's standard library.
+| **02 / OptionLab** | JavaScript, Canvas, CSS | Mathematical modeling, financial calculations, interactive data visualization |
+| **03 / CorrectionLab** | Python, HTML/SVG | Event-driven algorithms, execution timing, risk logic, backtesting |
+| **04 / Night Shift** | JavaScript, Canvas, CSS | Game loops, collision detection, state management, responsive input |
 
 ---
 
@@ -168,8 +166,6 @@ def correction_rebound_signal(bars, index, cfg):
     return qualifies, peak
 ```
 
-*From [`src/correction_strategy.py`](projects/correction-trading/src/correction_strategy.py). In the backtesting engine, signals generated at a session's close are executed at the **following session's open**, not retroactively at the signal price.*
-
 **Why it's relevant:** it demonstrates event-driven program design, handling historical data correctly, realistic execution assumptions, and separating an algorithm's research logic from evaluation. The project includes **8 automated tests** and generates a standalone interactive-looking HTML/SVG report.
 
 [View source and run instructions](projects/correction-trading/) · [Open example backtest report](projects/correction-trading/output/report.html) · [Inspect tests](projects/correction-trading/tests/test_strategy.py)
@@ -180,7 +176,7 @@ def correction_rebound_signal(bars, index, cfg):
 
 # 04 / Night Shift — Arcade Racing Game
 
-**Playable browser demo · JavaScript · Canvas 2D · Game physics**
+**JavaScript · Canvas 2D · Game physics**
 
 Night Shift is a self-contained endless driving game where the player moves between three lanes to avoid traffic. It includes increasing speed/difficulty, collision detection, scorekeeping, best-score persistence, pause/restart controls, and keyboard and touch input.
 
@@ -202,13 +198,9 @@ export function changeLane(state, step) {
 }
 ```
 
-*From [`game-logic.mjs`](projects/racing-game/game-logic.mjs).*
-
 The graphics are drawn with Canvas instead of using a game engine. The **game rules are kept separate from browser rendering**, so the underlying movement, collisions, obstacle spawning, and scoring can be tested without a DOM.
 
 **Why it's relevant:** the project showcases JavaScript fluency, time-based game loops, user input, visual feedback, and implementation of a complete interactive experience. The game includes **8 automated tests**.
-
-[Play locally / view instructions](projects/racing-game/) · [Inspect game engine](projects/racing-game/game-logic.mjs) · [See test suite](projects/racing-game/game-logic.test.mjs)
 
 ---
 
@@ -226,27 +218,3 @@ I'm especially interested in mobile application development, financial software,
 **Core skills demonstrated here:** JavaScript, TypeScript, React Native, Expo, Python, SQLite, mathematical modeling, automated testing, HTML/CSS, and Canvas APIs.
 
 ---
-
-### Quick start: verify the three demos
-
-```bash
-# Option pricing engine: 9 tests
-node --test projects/options-calculator/engine.test.mjs
-
-# Correction strategy: 8 tests
-cd projects/correction-trading
-python3 -m unittest discover -s tests -v
-python3 -m src.correction_strategy --csv data/synthetic_prices.csv --report output/report.html
-cd ../..
-
-# Racing game rules: 8 tests
-node --test projects/racing-game/game-logic.test.mjs
-
-# Browse both JavaScript apps via a local web server
-python3 -m http.server 8000
-# Visit /projects/options-calculator/ or /projects/racing-game/
-```
-
-**About this portfolio:** Metabolic Pal excerpts are from a private app codebase. OptionLab, CorrectionLab, and Night Shift are newly prepared runnable portfolio demos, each with source files and tests included here. The examples distinguish demonstrated implementation from independent product launch or live financial performance.
-
-**Contact:** Shash · [GitHub: @atshash](https://github.com/atshash)
