@@ -8,9 +8,9 @@ This portfolio includes **Metabolic Pal**, a completed private mobile-app build,
 
 ## Project index
 
-| Project | Technology | What it demonstrates | Explore |
+| Project | Technology | What it demonstrates | 
 | --- | --- | --- | --- |
-| **01 / Metabolic Pal** | React Native, TypeScript, Expo, SQLite | Mobile app architecture, data persistence, domain logic, testing | [Code examples below](#01--metabolic-pal) |
+| **01 / Metabolic Pal** | React Native, TypeScript, Expo, SQLite | Mobile app architecture, data persistence, domain logic, testing |
 | **02 / OptionLab** | JavaScript, Canvas, CSS | Mathematical modeling, financial calculations, interactive data visualization |
 | **03 / CorrectionLab** | Python, HTML/SVG | Event-driven algorithms, execution timing, risk logic, backtesting |
 | **04 / Night Shift** | JavaScript, Canvas, CSS | Game loops, collision detection, state management, responsive input |
@@ -94,8 +94,6 @@ test('specified 171.4 lb, 3 mph, 12%, 30 min treadmill regression', () => {
 });
 ```
 
-*Condensed from `tests/domain.test.ts`. The fixture and assertion helpers are defined in the original test file.*
-
 **Engineering value:** verifying calculations with repeatable tests, maintaining persistent application state, and separating user-interface behavior from core application logic.
 
 ---
@@ -123,13 +121,7 @@ const gamma = Math.exp(-q*T) * normalPDF(d1)
               / (S * sigma * Math.sqrt(T));
 ```
 
-*Illustrative excerpt from the calculation approach in [`engine.mjs`](projects/options-calculator/engine.mjs). The working implementation also handles puts, zero-volatility/expiry cases, input validation, and additional Greeks.*
-
 **Why it's relevant:** the project demonstrates mathematical logic, a clean separation between model code and UI, and data visualization driven by live user input. It also has **9 automated tests**, including known pricing benchmarks and put–call parity.
-
-[View the complete app and run instructions](projects/options-calculator/) · [Inspect calculation engine](projects/options-calculator/engine.mjs) · [See tests](projects/options-calculator/engine.test.mjs)
-
-*Model output is educational, not a live price feed or trading recommendation. The Black–Scholes model does not capture every feature of American-style equity options.*
 
 ---
 
@@ -167,10 +159,6 @@ def correction_rebound_signal(bars, index, cfg):
 ```
 
 **Why it's relevant:** it demonstrates event-driven program design, handling historical data correctly, realistic execution assumptions, and separating an algorithm's research logic from evaluation. The project includes **8 automated tests** and generates a standalone interactive-looking HTML/SVG report.
-
-[View source and run instructions](projects/correction-trading/) · [Open example backtest report](projects/correction-trading/output/report.html) · [Inspect tests](projects/correction-trading/tests/test_strategy.py)
-
-*Close-based stops do not guarantee a stop-price execution. All example performance figures use synthetic data and should not be treated as investment results.*
 
 ---
 
